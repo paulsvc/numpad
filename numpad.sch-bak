@@ -13,7 +13,6 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Connection ~ 1050 2500
 Connection ~ 1375 4125
 Connection ~ 1375 4725
 Connection ~ 1375 4850
@@ -386,7 +385,7 @@ L Device:R_Small R1
 U 1 1 5C8D42DF
 P 1100 2100
 F 0 "R1" V 1025 2100 50  0000 C CNN
-F 1 "5.1k" V 1150 2100 50  0000 C CNN
+F 1 "5.1k" V 1100 2100 50  0000 C CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" H 1100 2100 50  0001 C CNN
 F 3 "~" H 1100 2100 50  0001 C CNN
 	1    1100 2100
@@ -1343,7 +1342,7 @@ L Device:R_Small R2
 U 1 1 5E717206
 P 1100 2700
 F 0 "R2" V 1025 2700 50  0000 C CNN
-F 1 "5.1k" V 1150 2700 50  0000 C CNN
+F 1 "5.1k" V 1100 2700 50  0000 C CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" H 1100 2700 50  0001 C CNN
 F 3 "~" H 1100 2700 50  0001 C CNN
 	1    1100 2700
@@ -1352,29 +1351,18 @@ $EndComp
 Connection ~ 2300 1450
 Wire Wire Line
 	2300 1450 2300 1150
-$Comp
-L Device:Battery BT1
-U 1 1 5E88427C
-P 4625 875
-F 0 "BT1" H 4600 875 50  0000 R CNN
-F 1 "Battery" H 4950 875 50  0000 R CNN
-F 2 "" V 4625 935 50  0001 C CNN
-F 3 "~" V 4625 935 50  0001 C CNN
-	1    4625 875 
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
 	4300 1750 4625 1750
 $Comp
 L power:GND #PWR08
 U 1 1 5E88DCDE
-P 4625 675
-F 0 "#PWR08" H 4625 425 50  0001 C CNN
-F 1 "GND" H 4630 502 50  0000 C CNN
-F 2 "" H 4625 675 50  0001 C CNN
-F 3 "" H 4625 675 50  0001 C CNN
-	1    4625 675 
-	-1   0    0    1   
+P 3725 650
+F 0 "#PWR08" H 3725 400 50  0001 C CNN
+F 1 "GND" V 3730 522 50  0000 R CNN
+F 2 "" H 3725 650 50  0001 C CNN
+F 3 "" H 3725 650 50  0001 C CNN
+	1    3725 650 
+	0    1    1    0   
 $EndComp
 $Comp
 L Device:C C2
@@ -1410,8 +1398,6 @@ F 3 "" H 1150 1800 50  0001 C CNN
 	1    1150 1800
 	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	1000 1800 1075 1800
 $Comp
 L power:GND #PWR07
 U 1 1 5E8A7DAF
@@ -1483,8 +1469,8 @@ $Comp
 L Device:LED D14
 U 1 1 5E8DC00E
 P 4525 2550
-F 0 "D14" H 4518 2766 50  0000 C CNN
-F 1 "LED" H 4518 2675 50  0000 C CNN
+F 0 "D14" H 4525 2450 50  0000 C CNN
+F 1 "LED" H 4525 2375 50  0000 C CNN
 F 2 "" H 4525 2550 50  0001 C CNN
 F 3 "~" H 4525 2550 50  0001 C CNN
 	1    4525 2550
@@ -1520,7 +1506,7 @@ $Comp
 L Device:R_Small R15
 U 1 1 5E8EF39A
 P 4775 2550
-F 0 "R15" V 4700 2550 50  0000 C CNN
+F 0 "R15" V 4850 2550 50  0000 C CNN
 F 1 "470" V 4775 2550 50  0000 C CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" H 4775 2550 50  0001 C CNN
 F 3 "~" H 4775 2550 50  0001 C CNN
@@ -1622,8 +1608,6 @@ F 3 "~" H 1725 1900 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	1000 1900 1450 1900
-Wire Wire Line
-	1875 1900 1975 1900
 Connection ~ 2300 1900
 Wire Wire Line
 	2300 1900 2300 1950
@@ -1686,12 +1670,7 @@ Wire Wire Line
 	850  4850 850  4125
 Connection ~ 850  4850
 Wire Wire Line
-	1975 1900 1975 3700
-Wire Wire Line
 	850  3700 850  4125
-Connection ~ 1975 1900
-Wire Wire Line
-	1975 1900 2300 1900
 Connection ~ 850  4125
 $Comp
 L Device:C C1
@@ -1704,26 +1683,6 @@ F 3 "~" H 700 4125 50  0001 C CNN
 	1    700  4125
 	0    1    1    0   
 $EndComp
-$Comp
-L Power_Protection:USBLC6-2SC6 U1
-U 1 1 5E9DCADC
-P 1800 1000
-F 0 "U1" H 1800 1681 50  0000 C CNN
-F 1 "USBLC6-2SC6" H 1800 1590 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23-6" H 1050 1400 50  0001 C CNN
-F 3 "http://www2.st.com/resource/en/datasheet/CD00050750.pdf" H 2000 1350 50  0001 C CNN
-	1    1800 1000
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1075 1800 1075 1500
-Wire Wire Line
-	1075 1500 1800 1500
-Wire Wire Line
-	850  3700 1975 3700
-Connection ~ 1075 1800
-Wire Wire Line
-	1075 1800 1150 1800
 Wire Wire Line
 	1100 2400 1225 2400
 Connection ~ 1100 2400
@@ -1748,35 +1707,10 @@ $EndComp
 Connection ~ 1350 2800
 Wire Wire Line
 	1350 2800 1450 2800
-$Comp
-L power:+5V #PWR03
-U 1 1 5EA1667F
-P 1800 500
-F 0 "#PWR03" H 1800 350 50  0001 C CNN
-F 1 "+5V" V 1815 628 50  0000 L CNN
-F 2 "" H 1800 500 50  0001 C CNN
-F 3 "" H 1800 500 50  0001 C CNN
-	1    1800 500 
-	0    1    1    0   
-$EndComp
-Text GLabel 1300 900  0    50   Input ~ 0
+Text GLabel 1225 2400 2    50   Input ~ 0
 D-
-Text GLabel 2300 900  2    50   Input ~ 0
+Text GLabel 1225 2525 2    50   Input ~ 0
 D+
-Wire Wire Line
-	1225 2400 1225 1100
-Wire Wire Line
-	1225 1100 1300 1100
-Wire Wire Line
-	1925 2500 1925 1375
-Wire Wire Line
-	1925 1375 2350 1375
-Wire Wire Line
-	2350 1375 2350 1100
-Wire Wire Line
-	2350 1100 2300 1100
-Wire Wire Line
-	1050 2500 1925 2500
 $Comp
 L power:GND #PWR011
 U 1 1 5EA33CC2
@@ -1818,17 +1752,15 @@ Wire Wire Line
 Wire Wire Line
 	3600 1150 5275 1150
 Wire Wire Line
-	4625 1750 4625 1075
-Wire Wire Line
 	1000 4725 1000 5450
 Wire Wire Line
 	1000 6200 1000 5450
 Connection ~ 1000 5450
 $Comp
-L power:GND #PWR?
+L power:GND #PWR013
 U 1 1 5EA7614F
 P 1000 6200
-F 0 "#PWR?" H 1000 5950 50  0001 C CNN
+F 0 "#PWR013" H 1000 5950 50  0001 C CNN
 F 1 "GND" H 1005 6027 50  0000 C CNN
 F 2 "" H 1000 6200 50  0001 C CNN
 F 3 "" H 1000 6200 50  0001 C CNN
@@ -1837,10 +1769,10 @@ F 3 "" H 1000 6200 50  0001 C CNN
 $EndComp
 Connection ~ 1000 6200
 $Comp
-L Connector:Conn_01x02_Male J?
+L Connector:Conn_01x02_Male J3
 U 1 1 5EA7A2AB
 P 5150 825
-F 0 "J?" H 5258 1006 50  0000 C CNN
+F 0 "J3" H 5258 1006 50  0000 C CNN
 F 1 "Battery connectors" H 5258 915 50  0000 C CNN
 F 2 "" H 5150 825 50  0001 C CNN
 F 3 "~" H 5150 825 50  0001 C CNN
@@ -1848,18 +1780,112 @@ F 3 "~" H 5150 825 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR014
 U 1 1 5EA7A91F
 P 5350 925
-F 0 "#PWR?" H 5350 675 50  0001 C CNN
+F 0 "#PWR014" H 5350 675 50  0001 C CNN
 F 1 "GND" V 5355 797 50  0000 R CNN
 F 2 "" H 5350 925 50  0001 C CNN
 F 3 "" H 5350 925 50  0001 C CNN
 	1    5350 925 
 	0    -1   -1   0   
 $EndComp
-Text GLabel 5350 825  2    50   Input ~ 0
+Text GLabel 4625 1750 1    50   Input ~ 0
 VBAT
-Text GLabel 4625 1325 2    50   Input ~ 0
+$Comp
+L Switch:SW_SPST SW27
+U 1 1 5EA7EBF1
+P 5800 825
+F 0 "SW27" H 5800 1060 50  0000 C CNN
+F 1 "ON_OFF switch" H 5800 969 50  0000 C CNN
+F 2 "" H 5800 825 50  0001 C CNN
+F 3 "~" H 5800 825 50  0001 C CNN
+	1    5800 825 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1000 1800 1150 1800
+Wire Wire Line
+	1875 1900 2300 1900
+$Comp
+L power:VCC #PWR015
+U 1 1 5EA8ED18
+P 1450 1900
+F 0 "#PWR015" H 1450 1750 50  0001 C CNN
+F 1 "VCC" H 1467 2073 50  0000 C CNN
+F 2 "" H 1450 1900 50  0001 C CNN
+F 3 "" H 1450 1900 50  0001 C CNN
+	1    1450 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR017
+U 1 1 5EA90DB9
+P 1900 3775
+F 0 "#PWR017" H 1900 3525 50  0001 C CNN
+F 1 "GND" H 1905 3602 50  0000 C CNN
+F 2 "" H 1900 3775 50  0001 C CNN
+F 3 "" H 1900 3775 50  0001 C CNN
+	1    1900 3775
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR016
+U 1 1 5EA9128F
+P 1900 2775
+F 0 "#PWR016" H 1900 2625 50  0001 C CNN
+F 1 "VCC" H 1917 2948 50  0000 C CNN
+F 2 "" H 1900 2775 50  0001 C CNN
+F 3 "" H 1900 2775 50  0001 C CNN
+	1    1900 2775
+	1    0    0    -1  
+$EndComp
+Text GLabel 1400 3275 0    50   Input ~ 0
+D+
+Wire Wire Line
+	1050 2500 1225 2500
+Wire Wire Line
+	1225 2500 1225 2525
+Connection ~ 1050 2500
+$Comp
+L Device:Battery BT1
+U 1 1 5E88427C
+P 6400 825
+F 0 "BT1" H 6375 825 50  0000 R CNN
+F 1 "Battery" H 6725 825 50  0000 R CNN
+F 2 "" V 6400 885 50  0001 C CNN
+F 3 "~" V 6400 885 50  0001 C CNN
+	1    6400 825 
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5350 825  5600 825 
+Wire Wire Line
+	6000 825  6200 825 
+Text GLabel 6600 825  2    50   Input ~ 0
 VBAT
+$Comp
+L power:VCC #PWR0102
+U 1 1 5EAF14FD
+P 850 3700
+F 0 "#PWR0102" H 850 3550 50  0001 C CNN
+F 1 "VCC" H 867 3873 50  0000 C CNN
+F 2 "" H 850 3700 50  0001 C CNN
+F 3 "" H 850 3700 50  0001 C CNN
+	1    850  3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Power_Protection:PRTR5V0U2X D51
+U 1 1 5EA8FC2A
+P 1900 3275
+F 0 "D51" H 2250 3525 50  0000 L CNN
+F 1 "PRTR5V0U2X" H 2250 3425 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-143" H 1960 3275 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/PRTR5V0U2X.pdf" H 1960 3275 50  0001 C CNN
+	1    1900 3275
+	1    0    0    -1  
+$EndComp
+Text GLabel 2400 3275 2    50   Input ~ 0
+D-
 $EndSCHEMATC
