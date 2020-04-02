@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 2
+Sheet 1 3
 Title ""
 Date ""
 Rev ""
@@ -383,12 +383,12 @@ col3
 $Comp
 L Device:R_Small R1
 U 1 1 5C8D42DF
-P 1100 2100
-F 0 "R1" V 1025 2100 50  0000 C CNN
-F 1 "5.1k" V 1100 2100 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" H 1100 2100 50  0001 C CNN
-F 3 "~" H 1100 2100 50  0001 C CNN
-	1    1100 2100
+P 1500 2100
+F 0 "R1" V 1425 2100 50  0000 C CNN
+F 1 "5.1k" V 1575 2100 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 1500 2100 50  0001 C CNN
+F 3 "~" H 1500 2100 50  0001 C CNN
+	1    1500 2100
 	0    1    1    0   
 $EndComp
 $Comp
@@ -1300,14 +1300,6 @@ Text GLabel 8825 6225 0    60   Input ~ 0
 reset
 Text GLabel 9325 6125 2    60   Input ~ 0
 row3
-Text GLabel 9325 6225 2    60   Input ~ 0
-BatGND
-Text GLabel 9325 6025 2    60   Input ~ 0
-Boost5V
-Text GLabel 9100 4700 2    60   Input ~ 0
-Boost5V
-Text GLabel 9100 5275 2    60   Input ~ 0
-BatGND
 Wire Wire Line
 	7075 4425 7100 4425
 Wire Wire Line
@@ -1332,20 +1324,15 @@ F 3 "http://www.mouser.com/ds/2/268/22090a-52174.pdf" H 3450 2600 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	2300 1150 2925 1150
-Wire Wire Line
-	1200 2700 1200 2900
-Wire Wire Line
-	1200 2100 1200 2700
-Connection ~ 1200 2700
 $Comp
 L Device:R_Small R2
 U 1 1 5E717206
-P 1100 2700
-F 0 "R2" V 1025 2700 50  0000 C CNN
-F 1 "5.1k" V 1100 2700 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" H 1100 2700 50  0001 C CNN
-F 3 "~" H 1100 2700 50  0001 C CNN
-	1    1100 2700
+P 1500 2700
+F 0 "R2" V 1425 2700 50  0000 C CNN
+F 1 "5.1k" V 1575 2700 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 1500 2700 50  0001 C CNN
+F 3 "~" H 1500 2700 50  0001 C CNN
+	1    1500 2700
 	0    1    1    0   
 $EndComp
 Connection ~ 2300 1450
@@ -1353,17 +1340,6 @@ Wire Wire Line
 	2300 1450 2300 1150
 Wire Wire Line
 	4300 1750 4625 1750
-$Comp
-L power:GND #PWR08
-U 1 1 5E88DCDE
-P 3725 650
-F 0 "#PWR08" H 3725 400 50  0001 C CNN
-F 1 "GND" V 3730 522 50  0000 R CNN
-F 2 "" H 3725 650 50  0001 C CNN
-F 3 "" H 3725 650 50  0001 C CNN
-	1    3725 650 
-	0    1    1    0   
-$EndComp
 $Comp
 L Device:C C2
 U 1 1 5E89EC86
@@ -1379,24 +1355,13 @@ Connection ~ 4625 1750
 $Comp
 L power:GND #PWR09
 U 1 1 5E89EF9A
-P 4925 1750
-F 0 "#PWR09" H 4925 1500 50  0001 C CNN
-F 1 "GND" V 4930 1622 50  0000 R CNN
-F 2 "" H 4925 1750 50  0001 C CNN
-F 3 "" H 4925 1750 50  0001 C CNN
-	1    4925 1750
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:GND #PWR01
-U 1 1 5E89F42B
-P 1150 1800
-F 0 "#PWR01" H 1150 1550 50  0001 C CNN
-F 1 "GND" V 1150 1675 50  0000 R CNN
-F 2 "" H 1150 1800 50  0001 C CNN
-F 3 "" H 1150 1800 50  0001 C CNN
-	1    1150 1800
-	0    -1   -1   0   
+P 4975 1750
+F 0 "#PWR09" H 4975 1500 50  0001 C CNN
+F 1 "GND" V 4980 1622 50  0000 R CNN
+F 2 "" H 4975 1750 50  0001 C CNN
+F 3 "" H 4975 1750 50  0001 C CNN
+	1    4975 1750
+	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR07
@@ -1607,7 +1572,7 @@ F 3 "~" H 1725 1900 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	1000 1900 1450 1900
+	1000 1900 1300 1900
 Connection ~ 2300 1900
 Wire Wire Line
 	2300 1900 2300 1950
@@ -1633,8 +1598,6 @@ F 3 "" H 6375 2050 50  0001 C CNN
 	1    6375 2050
 	1    0    0    -1  
 $EndComp
-Text GLabel 7025 1450 2    50   Input ~ 0
-Boost5V
 Wire Wire Line
 	6875 1450 6925 1450
 $Comp
@@ -1649,8 +1612,6 @@ F 3 "~" H 6925 1600 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 Connection ~ 6925 1450
-Wire Wire Line
-	6925 1450 7025 1450
 $Comp
 L pspice:INDUCTOR L1
 U 1 1 5E99DC6B
@@ -1683,33 +1644,10 @@ F 3 "~" H 700 4125 50  0001 C CNN
 	1    700  4125
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	1100 2400 1225 2400
 Connection ~ 1100 2400
-Wire Wire Line
-	1000 2800 1350 2800
-Wire Wire Line
-	1450 2800 1450 1900
-Connection ~ 1450 1900
-Wire Wire Line
-	1450 1900 1575 1900
-$Comp
-L power:+5V #PWR02
-U 1 1 5EA160A9
-P 1350 2800
-F 0 "#PWR02" H 1350 2650 50  0001 C CNN
-F 1 "+5V" H 1365 2973 50  0000 C CNN
-F 2 "" H 1350 2800 50  0001 C CNN
-F 3 "" H 1350 2800 50  0001 C CNN
-	1    1350 2800
-	1    0    0    -1  
-$EndComp
-Connection ~ 1350 2800
-Wire Wire Line
-	1350 2800 1450 2800
-Text GLabel 1225 2400 2    50   Input ~ 0
+Text GLabel 1650 2400 2    50   Input ~ 0
 D-
-Text GLabel 1225 2525 2    50   Input ~ 0
+Text GLabel 1650 2500 2    50   Input ~ 0
 D+
 $Comp
 L power:GND #PWR011
@@ -1731,7 +1669,7 @@ F 1 "GND" H 555 3952 50  0000 C CNN
 F 2 "" H 550 4125 50  0001 C CNN
 F 3 "" H 550 4125 50  0001 C CNN
 	1    550  4125
-	-1   0    0    1   
+	1    0    0    -1  
 $EndComp
 $Comp
 L power:PWR_FLAG #FLG01
@@ -1782,15 +1720,15 @@ $EndComp
 $Comp
 L power:GND #PWR014
 U 1 1 5EA7A91F
-P 5350 925
-F 0 "#PWR014" H 5350 675 50  0001 C CNN
-F 1 "GND" V 5355 797 50  0000 R CNN
-F 2 "" H 5350 925 50  0001 C CNN
-F 3 "" H 5350 925 50  0001 C CNN
-	1    5350 925 
-	0    -1   -1   0   
+P 5425 925
+F 0 "#PWR014" H 5425 675 50  0001 C CNN
+F 1 "GND" V 5430 797 50  0000 R CNN
+F 2 "" H 5425 925 50  0001 C CNN
+F 3 "" H 5425 925 50  0001 C CNN
+	1    5425 925 
+	1    0    0    -1  
 $EndComp
-Text GLabel 4625 1750 1    50   Input ~ 0
+Text GLabel 4625 1700 1    50   Input ~ 0
 VBAT
 $Comp
 L Switch:SW_SPST SW27
@@ -1804,18 +1742,16 @@ F 3 "~" H 5800 825 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1000 1800 1150 1800
-Wire Wire Line
 	1875 1900 2300 1900
 $Comp
 L power:VCC #PWR015
 U 1 1 5EA8ED18
-P 1450 1900
-F 0 "#PWR015" H 1450 1750 50  0001 C CNN
-F 1 "VCC" H 1467 2073 50  0000 C CNN
-F 2 "" H 1450 1900 50  0001 C CNN
-F 3 "" H 1450 1900 50  0001 C CNN
-	1    1450 1900
+P 1300 1900
+F 0 "#PWR015" H 1300 1750 50  0001 C CNN
+F 1 "VCC" H 1317 2073 50  0000 C CNN
+F 2 "" H 1300 1900 50  0001 C CNN
+F 3 "" H 1300 1900 50  0001 C CNN
+	1    1300 1900
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1842,10 +1778,6 @@ F 3 "" H 1900 2775 50  0001 C CNN
 $EndComp
 Text GLabel 1400 3275 0    50   Input ~ 0
 D+
-Wire Wire Line
-	1050 2500 1225 2500
-Wire Wire Line
-	1225 2500 1225 2525
 Connection ~ 1050 2500
 $Comp
 L Device:Battery BT1
@@ -1862,7 +1794,7 @@ Wire Wire Line
 	5350 825  5600 825 
 Wire Wire Line
 	6000 825  6200 825 
-Text GLabel 6600 825  2    50   Input ~ 0
+Text GLabel 6100 825  3    50   Input ~ 0
 VBAT
 $Comp
 L power:VCC #PWR0102
@@ -1888,4 +1820,135 @@ F 3 "https://assets.nexperia.com/documents/data-sheet/PRTR5V0U2X.pdf" H 1960 327
 $EndComp
 Text GLabel 2400 3275 2    50   Input ~ 0
 D-
+Wire Wire Line
+	4925 1750 4975 1750
+Wire Wire Line
+	5350 925  5425 925 
+Wire Wire Line
+	1000 2800 1300 2800
+Wire Wire Line
+	1000 1800 1200 1800
+Wire Wire Line
+	1100 2400 1650 2400
+Wire Wire Line
+	1050 2500 1650 2500
+Connection ~ 1300 1900
+Wire Wire Line
+	1300 2800 1300 1900
+Wire Wire Line
+	1200 1800 1200 2900
+Wire Wire Line
+	1300 1900 1575 1900
+Wire Wire Line
+	1000 2700 1400 2700
+Wire Wire Line
+	1000 2100 1400 2100
+$Comp
+L power:GND #PWR02
+U 1 1 5E8E9A85
+P 1675 2700
+F 0 "#PWR02" H 1675 2450 50  0001 C CNN
+F 1 "GND" H 1680 2527 50  0000 C CNN
+F 2 "" H 1675 2700 50  0001 C CNN
+F 3 "" H 1675 2700 50  0001 C CNN
+	1    1675 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR01
+U 1 1 5E8E9FB5
+P 1675 2100
+F 0 "#PWR01" H 1675 1850 50  0001 C CNN
+F 1 "GND" H 1680 1927 50  0000 C CNN
+F 2 "" H 1675 2100 50  0001 C CNN
+F 3 "" H 1675 2100 50  0001 C CNN
+	1    1675 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1600 2100 1675 2100
+Wire Wire Line
+	1600 2700 1675 2700
+Wire Wire Line
+	4625 1750 4625 1700
+$Comp
+L power:GND #PWR03
+U 1 1 5E9132A0
+P 6725 825
+F 0 "#PWR03" H 6725 575 50  0001 C CNN
+F 1 "GND" H 6730 652 50  0000 C CNN
+F 2 "" H 6725 825 50  0001 C CNN
+F 3 "" H 6725 825 50  0001 C CNN
+	1    6725 825 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6725 825  6600 825 
+$Comp
+L power:+5V #PWR08
+U 1 1 5E9216C0
+P 7225 1450
+F 0 "#PWR08" H 7225 1300 50  0001 C CNN
+F 1 "+5V" H 7240 1623 50  0000 C CNN
+F 2 "" H 7225 1450 50  0001 C CNN
+F 3 "" H 7225 1450 50  0001 C CNN
+	1    7225 1450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6925 1450 7225 1450
+$Comp
+L power:+5V #PWR020
+U 1 1 5E93011A
+P 9675 6025
+F 0 "#PWR020" H 9675 5875 50  0001 C CNN
+F 1 "+5V" H 9690 6198 50  0000 C CNN
+F 2 "" H 9675 6025 50  0001 C CNN
+F 3 "" H 9675 6025 50  0001 C CNN
+	1    9675 6025
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9675 6025 9325 6025
+$Comp
+L power:+5V #PWR018
+U 1 1 5E93DC9C
+P 9100 4700
+F 0 "#PWR018" H 9100 4550 50  0001 C CNN
+F 1 "+5V" H 9115 4873 50  0000 C CNN
+F 2 "" H 9100 4700 50  0001 C CNN
+F 3 "" H 9100 4700 50  0001 C CNN
+	1    9100 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR021
+U 1 1 5E93E052
+P 9675 6225
+F 0 "#PWR021" H 9675 5975 50  0001 C CNN
+F 1 "GND" H 9680 6052 50  0000 C CNN
+F 2 "" H 9675 6225 50  0001 C CNN
+F 3 "" H 9675 6225 50  0001 C CNN
+	1    9675 6225
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9675 6225 9325 6225
+$Comp
+L power:GND #PWR019
+U 1 1 5E94DA92
+P 9100 5275
+F 0 "#PWR019" H 9100 5025 50  0001 C CNN
+F 1 "GND" H 9105 5102 50  0000 C CNN
+F 2 "" H 9100 5275 50  0001 C CNN
+F 3 "" H 9100 5275 50  0001 C CNN
+	1    9100 5275
+	1    0    0    -1  
+$EndComp
+$Sheet
+S 13575 4725 2100 1575
+U 5E885BF2
+F0 "Numpad24Keys" 50
+F1 "Numpad24Keys.sch" 50
+$EndSheet
 $EndSCHEMATC

@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 2
+Sheet 2 3
 Title ""
 Date ""
 Rev ""
@@ -21,12 +21,12 @@ NoConn ~ 3650 3050
 $Comp
 L Device:R R13
 U 1 1 5E7927FA
-P 5950 3050
-F 0 "R13" V 6025 3050 50  0000 C CNN
-F 1 "10K" V 5950 3050 50  0000 C CNN
-F 2 "" V 5880 3050 50  0001 C CNN
-F 3 "~" H 5950 3050 50  0001 C CNN
-	1    5950 3050
+P 6325 3050
+F 0 "R13" V 6400 3050 50  0000 C CNN
+F 1 "10K" V 6325 3050 50  0000 C CNN
+F 2 "" V 6255 3050 50  0001 C CNN
+F 3 "~" H 6325 3050 50  0001 C CNN
+	1    6325 3050
 	0    1    1    0   
 $EndComp
 $Comp
@@ -66,8 +66,8 @@ $Comp
 L Device:C C9
 U 1 1 5E794001
 P 2650 3450
-F 0 "C9" V 2398 3450 50  0000 C CNN
-F 1 "22p" V 2489 3450 50  0000 C CNN
+F 0 "C9" V 2600 3550 50  0000 C CNN
+F 1 "22p" V 2600 3325 50  0000 C CNN
 F 2 "" H 2688 3300 50  0001 C CNN
 F 3 "~" H 2650 3450 50  0001 C CNN
 	1    2650 3450
@@ -129,7 +129,7 @@ F 3 "~" H 4750 4960 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	2500 3450 2500 3750
+	2500 3450 2500 3600
 Wire Wire Line
 	2925 2350 2925 2575
 Wire Wire Line
@@ -215,12 +215,6 @@ Text GLabel 5800 3350 2    50   Input ~ 0
 col2
 Text GLabel 5800 3450 2    50   Input ~ 0
 col3
-Text GLabel 5800 2050 2    50   Input ~ 0
-BatGND
-Text GLabel 6100 3050 2    50   Input ~ 0
-BatGND
-Text GLabel 5800 1950 1    50   Input ~ 0
-Boost5V
 $Comp
 L keyboard_parts:ATMEGA32U4 U5
 U 1 1 5E705D1C
@@ -232,32 +226,20 @@ F 3 "" H 4700 3000 60  0000 C CNN
 	1    4700 3000
 	1    0    0    -1  
 $EndComp
-Text GLabel 3650 2050 0    50   Input ~ 0
-Boost5V
 Text GLabel 3350 2150 0    50   Input ~ 0
 D-
 Text GLabel 3350 2250 0    50   Input ~ 0
 D+
-Text GLabel 3650 2550 0    50   Input ~ 0
-Boost5V
-Text GLabel 3650 3250 0    50   Input ~ 0
-Boost5V
 Text GLabel 2400 2800 0    50   Input ~ 0
 reset
-Text GLabel 3650 3350 0    50   Input ~ 0
-BatGND
 Text GLabel 3650 4050 0    50   Input ~ 0
 LED
-Text GLabel 1725 2950 0    50   Input ~ 0
-Boost5V
-Text GLabel 2475 3100 0    50   Input ~ 0
-BatGND
 $Comp
 L keyboard_parts:SW_PUSH SW26
 U 1 1 5E8077A9
 P 2775 3100
-F 0 "SW26" H 2775 3355 50  0000 C CNN
-F 1 "SW_PUSH" H 2775 3264 50  0000 C CNN
+F 0 "SW26" H 2775 3075 50  0000 C CNN
+F 1 "SW_PUSH" H 2775 3200 50  0000 C CNN
 F 2 "" H 2775 3100 60  0000 C CNN
 F 3 "" H 2775 3100 60  0000 C CNN
 	1    2775 3100
@@ -295,24 +277,6 @@ Wire Wire Line
 	3100 2800 3100 2950
 Connection ~ 3100 2950
 NoConn ~ 3650 2850
-Text GLabel 2500 3600 0    50   Input ~ 0
-BatGND
-Text GLabel 4450 4800 0    50   Input ~ 0
-BatGND
-Text GLabel 5050 4700 2    50   Input ~ 0
-BatGND
-Text GLabel 5800 4050 2    50   Input ~ 0
-BatGND
-Text GLabel 5800 2850 2    50   Input ~ 0
-BatGND
-Text GLabel 5475 4300 2    50   Input ~ 0
-Boost5V
-Text GLabel 5475 5100 2    50   Input ~ 0
-Boost5V
-Text GLabel 5800 2950 2    50   Input ~ 0
-Boost5V
-Text GLabel 3050 4600 0    50   Input ~ 0
-Boost5V
 $Comp
 L Connector:Conn_01x04_Male J2
 U 1 1 5EA37330
@@ -324,10 +288,6 @@ F 3 "~" H 7175 3050 50  0001 C CNN
 	1    7175 3050
 	1    0    0    -1  
 $EndComp
-Text GLabel 7375 3150 2    50   Input ~ 0
-Boost5V
-Text GLabel 7375 3250 2    50   Input ~ 0
-BatGND
 Text GLabel 7375 2950 2    50   Input ~ 0
 SDA
 Text GLabel 7375 3050 2    50   Input ~ 0
@@ -343,10 +303,6 @@ F 3 "~" H 7175 3775 50  0001 C CNN
 	1    7175 3775
 	1    0    0    -1  
 $EndComp
-Text GLabel 7375 3875 2    50   Input ~ 0
-Boost5V
-Text GLabel 7375 3975 2    50   Input ~ 0
-BatGND
 Text GLabel 7375 3675 2    50   Input ~ 0
 SDA
 Text GLabel 7375 3775 2    50   Input ~ 0
@@ -363,4 +319,301 @@ F 3 "" H 2925 2350 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Connection ~ 2925 2350
+$Comp
+L power:+5V #PWR028
+U 1 1 5E94F092
+P 3375 2050
+F 0 "#PWR028" H 3375 1900 50  0001 C CNN
+F 1 "+5V" H 3390 2223 50  0000 C CNN
+F 2 "" H 3375 2050 50  0001 C CNN
+F 3 "" H 3375 2050 50  0001 C CNN
+	1    3375 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3375 2050 3650 2050
+$Comp
+L power:+5V #PWR027
+U 1 1 5E94FCB1
+P 3300 2700
+F 0 "#PWR027" H 3300 2550 50  0001 C CNN
+F 1 "+5V" H 3315 2873 50  0000 C CNN
+F 2 "" H 3300 2700 50  0001 C CNN
+F 3 "" H 3300 2700 50  0001 C CNN
+	1    3300 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 2700 3475 2700
+Wire Wire Line
+	3475 2700 3475 2550
+Wire Wire Line
+	3475 2550 3650 2550
+$Comp
+L power:+5V #PWR026
+U 1 1 5E9509E1
+P 3175 3325
+F 0 "#PWR026" H 3175 3175 50  0001 C CNN
+F 1 "+5V" H 3190 3498 50  0000 C CNN
+F 2 "" H 3175 3325 50  0001 C CNN
+F 3 "" H 3175 3325 50  0001 C CNN
+	1    3175 3325
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3175 3325 3275 3325
+Wire Wire Line
+	3275 3325 3275 3250
+Wire Wire Line
+	3275 3250 3650 3250
+$Comp
+L power:+5V #PWR022
+U 1 1 5E9517B9
+P 1725 2950
+F 0 "#PWR022" H 1725 2800 50  0001 C CNN
+F 1 "+5V" H 1740 3123 50  0000 C CNN
+F 2 "" H 1725 2950 50  0001 C CNN
+F 3 "" H 1725 2950 50  0001 C CNN
+	1    1725 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L keyboard_parts:GND #PWR023
+U 1 1 5E951EE9
+P 2325 3100
+F 0 "#PWR023" H 2325 3150 20  0001 C CNN
+F 1 "GND" H 2325 3159 30  0000 C CNN
+F 2 "" H 2325 3100 60  0000 C CNN
+F 3 "" H 2325 3100 60  0000 C CNN
+	1    2325 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2325 3100 2475 3100
+$Comp
+L keyboard_parts:GND #PWR024
+U 1 1 5E952E1C
+P 2325 3600
+F 0 "#PWR024" H 2325 3650 20  0001 C CNN
+F 1 "GND" H 2325 3659 30  0000 C CNN
+F 2 "" H 2325 3600 60  0000 C CNN
+F 3 "" H 2325 3600 60  0000 C CNN
+	1    2325 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2325 3600 2500 3600
+Connection ~ 2500 3600
+Wire Wire Line
+	2500 3600 2500 3750
+$Comp
+L power:+5V #PWR025
+U 1 1 5E953A83
+P 2875 4600
+F 0 "#PWR025" H 2875 4450 50  0001 C CNN
+F 1 "+5V" H 2890 4773 50  0000 C CNN
+F 2 "" H 2875 4600 50  0001 C CNN
+F 3 "" H 2875 4600 50  0001 C CNN
+	1    2875 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2875 4600 3050 4600
+$Comp
+L keyboard_parts:GND #PWR029
+U 1 1 5E954826
+P 4250 4800
+F 0 "#PWR029" H 4250 4850 20  0001 C CNN
+F 1 "GND" H 4250 4859 30  0000 C CNN
+F 2 "" H 4250 4800 60  0000 C CNN
+F 3 "" H 4250 4800 60  0000 C CNN
+	1    4250 4800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4250 4800 4450 4800
+$Comp
+L power:+5V #PWR031
+U 1 1 5E955B70
+P 5650 5100
+F 0 "#PWR031" H 5650 4950 50  0001 C CNN
+F 1 "+5V" H 5665 5273 50  0000 C CNN
+F 2 "" H 5650 5100 50  0001 C CNN
+F 3 "" H 5650 5100 50  0001 C CNN
+	1    5650 5100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5650 5100 5475 5100
+$Comp
+L power:+5V #PWR032
+U 1 1 5E956E59
+P 5675 4300
+F 0 "#PWR032" H 5675 4150 50  0001 C CNN
+F 1 "+5V" H 5690 4473 50  0000 C CNN
+F 2 "" H 5675 4300 50  0001 C CNN
+F 3 "" H 5675 4300 50  0001 C CNN
+	1    5675 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5675 4300 5475 4300
+$Comp
+L keyboard_parts:GND #PWR033
+U 1 1 5E957D11
+P 5925 4050
+F 0 "#PWR033" H 5925 4100 20  0001 C CNN
+F 1 "GND" H 5925 4109 30  0000 C CNN
+F 2 "" H 5925 4050 60  0000 C CNN
+F 3 "" H 5925 4050 60  0000 C CNN
+	1    5925 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5925 4050 5800 4050
+$Comp
+L keyboard_parts:GND #PWR030
+U 1 1 5E958D4B
+P 5200 4700
+F 0 "#PWR030" H 5200 4750 20  0001 C CNN
+F 1 "GND" H 5200 4759 30  0000 C CNN
+F 2 "" H 5200 4700 60  0000 C CNN
+F 3 "" H 5200 4700 60  0000 C CNN
+	1    5200 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5200 4700 5050 4700
+$Comp
+L power:+5V #PWR041
+U 1 1 5E959E8C
+P 7775 3875
+F 0 "#PWR041" H 7775 3725 50  0001 C CNN
+F 1 "+5V" H 7790 4048 50  0000 C CNN
+F 2 "" H 7775 3875 50  0001 C CNN
+F 3 "" H 7775 3875 50  0001 C CNN
+	1    7775 3875
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR039
+U 1 1 5E95A181
+P 7775 3150
+F 0 "#PWR039" H 7775 3000 50  0001 C CNN
+F 1 "+5V" H 7790 3323 50  0000 C CNN
+F 2 "" H 7775 3150 50  0001 C CNN
+F 3 "" H 7775 3150 50  0001 C CNN
+	1    7775 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7375 3875 7775 3875
+Wire Wire Line
+	7775 3150 7375 3150
+$Comp
+L keyboard_parts:GND #PWR042
+U 1 1 5E95C35B
+P 7775 3975
+F 0 "#PWR042" H 7775 4025 20  0001 C CNN
+F 1 "GND" H 7775 4034 30  0000 C CNN
+F 2 "" H 7775 3975 60  0000 C CNN
+F 3 "" H 7775 3975 60  0000 C CNN
+	1    7775 3975
+	1    0    0    -1  
+$EndComp
+$Comp
+L keyboard_parts:GND #PWR040
+U 1 1 5E95CACB
+P 7775 3250
+F 0 "#PWR040" H 7775 3300 20  0001 C CNN
+F 1 "GND" H 7775 3309 30  0000 C CNN
+F 2 "" H 7775 3250 60  0000 C CNN
+F 3 "" H 7775 3250 60  0000 C CNN
+	1    7775 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7775 3250 7375 3250
+Wire Wire Line
+	7775 3975 7375 3975
+$Comp
+L keyboard_parts:GND #PWR038
+U 1 1 5E960222
+P 6575 3050
+F 0 "#PWR038" H 6575 3100 20  0001 C CNN
+F 1 "GND" H 6575 3100 30  0000 C CNN
+F 2 "" H 6575 3050 60  0000 C CNN
+F 3 "" H 6575 3050 60  0000 C CNN
+	1    6575 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5800 3050 6175 3050
+Wire Wire Line
+	6475 3050 6575 3050
+$Comp
+L keyboard_parts:GND #PWR036
+U 1 1 5E962F54
+P 6150 2850
+F 0 "#PWR036" H 6150 2900 20  0001 C CNN
+F 1 "GND" H 6150 2900 30  0000 C CNN
+F 2 "" H 6150 2850 60  0000 C CNN
+F 3 "" H 6150 2850 60  0000 C CNN
+	1    6150 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6150 2850 5800 2850
+$Comp
+L power:+5V #PWR037
+U 1 1 5E964414
+P 6350 2950
+F 0 "#PWR037" H 6350 2800 50  0001 C CNN
+F 1 "+5V" H 6365 3123 50  0000 C CNN
+F 2 "" H 6350 2950 50  0001 C CNN
+F 3 "" H 6350 2950 50  0001 C CNN
+	1    6350 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6350 2950 5800 2950
+$Comp
+L power:+5V #PWR034
+U 1 1 5E9659F9
+P 6050 1950
+F 0 "#PWR034" H 6050 1800 50  0001 C CNN
+F 1 "+5V" H 6065 2123 50  0000 C CNN
+F 2 "" H 6050 1950 50  0001 C CNN
+F 3 "" H 6050 1950 50  0001 C CNN
+	1    6050 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6050 1950 5800 1950
+$Comp
+L keyboard_parts:GND #PWR035
+U 1 1 5E9670BF
+P 6050 2050
+F 0 "#PWR035" H 6050 2100 20  0001 C CNN
+F 1 "GND" H 6050 2100 30  0000 C CNN
+F 2 "" H 6050 2050 60  0000 C CNN
+F 3 "" H 6050 2050 60  0000 C CNN
+	1    6050 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6050 2050 5800 2050
+$Comp
+L keyboard_parts:GND #PWR043
+U 1 1 5E969285
+P 3500 3350
+F 0 "#PWR043" H 3500 3400 20  0001 C CNN
+F 1 "GND" H 3500 3409 30  0000 C CNN
+F 2 "" H 3500 3350 60  0000 C CNN
+F 3 "" H 3500 3350 60  0000 C CNN
+	1    3500 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3500 3350 3650 3350
 $EndSCHEMATC
